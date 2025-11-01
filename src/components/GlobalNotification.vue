@@ -30,9 +30,9 @@ const markAsViewed = () => {
 <template>
   <div
     v-if="!globalNotification.viewed"
-    class="w-full min-h-10 bg-black text-sm text-white flex items-center justify-center relative"
+    class="w-full min-h-10 bg-black text-sm text-white flex items-center justify-between px-4 py-2 lg:justify-center relative"
   >
-    <p>
+    <p class="max-w-[220px] md:max-w-none">
       {{ globalNotification.message }}
     </p>
     <button @click="markAsViewed" class="absolute right-[5%] cursor-pointer">
