@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "IntegralCF";
+  src: url("@/assets/fonts/Fontspring-DEMO-integralcf-regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-integral: "IntegralCF", sans-serif;
+}

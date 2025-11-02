@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>hello</h1>
+  <section class="bg-[#F2F0F1]">123</section>
 </template>

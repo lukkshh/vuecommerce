@@ -6,6 +6,5 @@ import Header from "./components/Header/Header.vue";
 <template>
   <GlobalNotification />
   <Header></Header>
-  <div class="h-screen bg-[#F2F0F1]"></div>
   <router-view />
 </template>

@@ -20,7 +20,7 @@ const handleOpen = () => {
   <header class="min-h-20 flex justify-around items-center relative">
     <div class="flex space-x-4">
       <Hamburger :isOpen="isOpen" @toggle="handleOpen" />
-      <p class="font-bold text-2xl">SHOP.CO</p>
+      <p class="font-bold text-2xl font-integral">SHOP.CO</p>
     </div>
     <NavMenu :isOpen="isOpen" />
     <Search />
