@@ -8,9 +8,11 @@ import Brands from "../components/Brands.vue";
 <template>
   <section class="bg-[#F2F0F1] flex flex-col md:flex-row">
     <div
-      class="flex flex-col justify-center items-center lg:ml-20 md:items-start p-4"
+      class="flex flex-col justify-center items-center lg:ml-5 2xl:ml-20 md:items-start p-4"
     >
-      <h1 class="font-integral text-4xl md:text-6xl">
+      <h1
+        class="font-integral font-bold text-4xl md:w-[640px] tracking-wide md:text-6xl"
+      >
         FIND CLOTHES THAT MATCHES YOUR STYLE
       </h1>
       <p class="opacity-60 mt-5 md:max-w-[700px]">
