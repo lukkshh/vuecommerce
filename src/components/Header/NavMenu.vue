@@ -8,8 +8,11 @@ const MenuItems = ["Shop", "On Sale", "New Arrivals", "Brands"];
 
 <template>
   <nav
-    :class="{ hidden: !isOpen }"
-    class="absolute top-20 bg-white transition-all w-full lg:w-auto lg:block lg:bg-inherit lg:static"
+    :class="{
+      'translate-x-0': isOpen,
+      '-translate-x-full': !isOpen,
+    }"
+    class="absolute top-20 bg-white z-50 lg:translate-x-0 transition-all w-full lg:w-auto lg:block lg:bg-inherit lg:static"
   >
     <ul
       class="flex flex-col p-4 space-y-6 lg:p-0 lg:space-y-0 lg:flex-row space-x-6"
