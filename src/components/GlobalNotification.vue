@@ -3,6 +3,8 @@ import { ref } from "vue";
 
 import XIcon from "@/assets/ui/X.svg";
 
+const FAKE_FROM_API_DATE = "2025-11-02T15:00:00.000Z";
+
 interface Notification {
   message: string;
   viewed: boolean;
@@ -10,7 +12,6 @@ interface Notification {
 }
 
 const stored = localStorage.getItem("globalNotification");
-
 const parsed = stored ? JSON.parse(stored) : {};
 const globalNotification = ref<Notification>({
   viewed: parsed.viewed ?? true,
@@ -25,6 +26,22 @@ const markAsViewed = () => {
     JSON.stringify(globalNotification.value)
   );
 };
+
+if (
+  !parsed ||
+  !parsed.date ||
+  new Date(FAKE_FROM_API_DATE) > new Date(parsed.date)
+) {
+  globalNotification.value = {
+    viewed: false,
+    message: "🎉 New sale just dropped!",
+    date: FAKE_FROM_API_DATE,
+  };
+  localStorage.setItem(
+    "globalNotification",
+    JSON.stringify(globalNotification.value)
+  );
+}
 </script>
 
 <template>
