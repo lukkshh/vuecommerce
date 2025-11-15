@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import XIcon from "@/assets/ui/X.svg";
-import { useGlobalNotification } from "../composables/useGlobalNotification";
+import { useGlobalNotification } from "@/composables/useGlobalNotification";
 
 const { notification, markAsViewed } = useGlobalNotification();
 </script>
